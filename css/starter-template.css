@@ -1,0 +1,17 @@
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.card {
+  text-align: left;
+}
+
+.card-block{
+  margin-left: 0.75rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+}
