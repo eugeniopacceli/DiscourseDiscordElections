@@ -58,6 +58,10 @@ body {
   padding: 2rem;
 }
 
+.inner .cover {
+  margin-top: 100px;
+}
+
 
 /*
  * Header

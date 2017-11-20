@@ -16,10 +16,15 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname+'/landing.html');
 });
 
-app.get('/discourseDiscordElections', function (req, res) {
-    res.sendFile(__dirname+'/index.html');
+app.get('/rules', function (req, res) {
+    res.sendFile(__dirname+'/rules.html');
 });
 
+app.get('/modrules', function (req, res) {
+    res.sendFile(__dirname+'/modrules.html');
+});
+
+/*
 function generateFileName(voteId){
     return __dirname + "/votesDatabase/" + voteId + ".txt";
 }
@@ -51,7 +56,7 @@ app.post('/vote', function(req, res) {
             res.send(generateVoteResponse(voteId, voteFormContentProcessed));
         }
     });
-});
+});*/
 
 app.listen(80, function () {
     console.log('Discourse Discord Election Server listening on port 80!');
