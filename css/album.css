@@ -6,6 +6,10 @@ body {
   margin-bottom: 0;
 }
 
+.bg-inverse{
+  background-color: #2C2F33;
+}
+
 .jumbotron {
   padding-top: 6rem;
   padding-bottom: 6rem;
