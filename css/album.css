@@ -1,5 +1,6 @@
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
+  background-color: #23272A;
 }
 
 .navbar {
@@ -14,7 +15,8 @@ body {
   padding-top: 6rem;
   padding-bottom: 6rem;
   margin-bottom: 0;
-  background-color: #fff;
+  background-color: #23272A;
+  color: #FFFFFF;
 }
 
 .jumbotron p:last-child {
