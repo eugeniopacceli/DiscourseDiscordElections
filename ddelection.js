@@ -24,6 +24,10 @@ function ensureSecure(req, res, next){
 app.all('*', ensureSecure);
 */
 
+app.get('/elections/guard/', function (req, res) {
+    res.send('Thanks! However, this is a placeholder and nothing was done with your information. - Eugenio');
+});
+
 app.get('/', function (req, res) {
     res.sendFile(__dirname+'/landing.html');
 });
