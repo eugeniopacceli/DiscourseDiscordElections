@@ -19,6 +19,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "https": "^1.0.0",
-    "randomstring": "^1.1.5"
+    "randomstring": "^1.1.5",
+    "request": "^2.83.0"
   }
 }
