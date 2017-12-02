@@ -55,6 +55,16 @@ function generateErrorResponse(err){
     return "Your vote could not be computed, contact the administration or try to fix the following error: " + err;
 }
 
+app.get('/elections/whoami/', function (req, res) {
+    if(req.session.usercode == null || sessions[req.session.usercode] == null){
+        res.send("Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!!");
+    }else{
+        let userObject = sessions[req.session.usercode];
+        res.send('<img class="rounded-circle" style="width:48px" src="https://cdn.discordapp.com/avatars/' + userObject.id +'/' + userObject.avatar + '/>  "'
+                 + userObject.username + "#" + userObject.discriminator);
+    }
+});
+
 app.post('/elections/vote/', function(req, res) {
     if(req.session.usercode == null || sessions[req.session.usercode] == null){
         res.send(generateErrorResponse("Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!!"));
@@ -92,8 +102,6 @@ app.get('/elections/dash/', function (req, res) {
         res.sendFile(__dirname+'/elections.dash.html');
     }
 });
-
-// https://cdn.discordapp.com/avatars/user_id/user_avatar.png
 
 app.get('/elections/guard/', function (req, res) {
     if(req.query.code == null || req.query.code == '' || req.query.state == null || req.query.state == ''){

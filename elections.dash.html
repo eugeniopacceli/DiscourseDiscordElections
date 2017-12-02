@@ -39,7 +39,10 @@
                         Elector Form
                     </div>
                     <div class="card-block">
+                        <h4 class="card-title" id="userinfo"></h4>
+                        <hr/>
                         <h4 class="card-title">Choose a maximum of 5 candidates for moderation that you recommend.</h4>
+                        <hr/>
                         <form id="voteForm" method="POST" action="/vote">
                             <p><input class="filled-in" type="checkbox" id="1" name="candidates" value="Cage#5919" /><label for="1" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/cage.jpg" /> Cage#5919</label></p>
                             <p><input class="filled-in" type="checkbox" id="2" name="candidates" value="dooby#2204" /><label for="2" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/dooby.png" /> dooby#2204</label></p>
@@ -58,6 +61,7 @@
                             <p><input class="filled-in" type="checkbox" id="15" name="candidates" value="Tayo#1324" /><label for="15" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/tayo.jpg" /> Tayo#1324</label></p>
                             <p><input class="filled-in" type="checkbox" id="16" name="candidates" value="theamatuer#5417" /><label for="16" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/theamateur.jpg" /> theamatuer#5417</label></p>
                             <p><input class="filled-in" type="checkbox" id="17" name="candidates" value="TomDynamic#4673" /><label for="17" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/tom.jpg" /> TomDynamic#4673</label></p>
+                            <p><input class="filled-in" type="checkbox" id="17" name="candidates" value="tringle#3427" /><label for="17" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/tringle.jpg" /> tringle#3427</label></p>
                             <p><input class="filled-in" type="checkbox" id="18" name="candidates" value="VTomatoma#9227" /><label for="18" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/vt.jpg" /> VTomatoma#9227</label></p>
                             <button type="button" id="confirmBtn" class="btn btn-primary">Submit</button>
                         </form>
@@ -114,44 +118,48 @@
         if(numberOfVotes > 5){
           $(this).prop("checked", false);
         }
-    });
-    
-    function showResponseModal(msg){
-      $('.modal').modal('close');
-      $("#response").html(msg);
-      $('#responseModal').modal('open');
-    }
-
-    function showConfirmModal(msg){
-      $('.modal').modal('close');
-      $("#confirmText").html(msg);
-      $('#confirmModal').modal('open');
-    }
-
-    $("#confirmBack").click(function(){
-      $('#confirmModal').modal('close');
-    });
-
-    $("#confirmBtn").click(function(){
-        var voteContent = $("#voteForm").serializeArray();
-        var stringVotes = "";
-        var numberOfVotes = 0;
-        for(var obj of voteContent){
-            if(obj.name == "candidates") numberOfVotes++;
-            stringVotes += obj.value + "<br/>";
-        }
-        if(numberOfVotes > 5){
-          stringVotes += "You can only vote for 5 (five) candidates for your vote to be counted and validated, try again!";
-        }
-        showConfirmModal(stringVotes);
-    });
-
-    $("#submitBtn").click(function(){
-      var voteContent = $("#voteForm").serializeArray();
-      console.log("sending "+voteContent);
-      $.post("/elections/vote", $("#voteForm").serialize()).done(function( data ) {
-        showResponseModal(data);
       });
-    });
+    
+      function showResponseModal(msg){
+        $('.modal').modal('close');
+        $("#response").html(msg);
+        $('#responseModal').modal('open');
+      }
+
+      function showConfirmModal(msg){
+        $('.modal').modal('close');
+        $("#confirmText").html(msg);
+        $('#confirmModal').modal('open');
+      }
+
+      $("#confirmBack").click(function(){
+        $('#confirmModal').modal('close');
+      });
+
+      $("#confirmBtn").click(function(){
+          var voteContent = $("#voteForm").serializeArray();
+          var stringVotes = "";
+          var numberOfVotes = 0;
+          for(var obj of voteContent){
+              if(obj.name == "candidates") numberOfVotes++;
+              stringVotes += obj.value + "<br/>";
+          }
+          if(numberOfVotes > 5){
+            stringVotes += "You can only vote for 5 (five) candidates for your vote to be counted and validated, try again!";
+          }
+          showConfirmModal(stringVotes);
+      });
+
+      $("#submitBtn").click(function(){
+        var voteContent = $("#voteForm").serializeArray();
+        console.log("sending "+voteContent);
+        $.post("/elections/vote", $("#voteForm").serialize()).done(function( data ) {
+          showResponseModal(data);
+        });
+      });
+
+      $.get("/elections/whoami", function(data) {
+        $("#userinfo").html(data);
+      });
     </script>
 </html>
