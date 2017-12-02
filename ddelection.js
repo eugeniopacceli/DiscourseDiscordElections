@@ -10,6 +10,7 @@ var app = express();
 
 app.use('/js', express.static(__dirname + '/js'));
 app.use('/css', express.static(__dirname + '/css'));
+app.use('/avatars', express.static(__dirname + '/avatars'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
@@ -39,14 +40,54 @@ app.get('/elections/', function (req, res) {
     res.sendFile(__dirname+'/elections.html');
 });
 
+function generateFileName(voteId){
+    return __dirname + "/votesDatabase/" + voteId + ".txt";
+}
 
-app.get('/elections/dash/', function (req, res) {
-//    res.sendFile(__dirname+'/elections.dash.html');
-    if(sessions[req.session.usercode == null]){
-        res.send("Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!!");
+function generateVoteResponse(id, username, content){
+    return "Your vote id: <code>"+ id + "</code><br/>" +
+           "Your Discord username: <code>" + username + "</code><br/>" +
+           "Your vote formulary:<br><code>" + content +
+           "</code><hr/><p>You may vote again by coming back, doing so will overwrite your last vote. Thank you for participating!</p>";
+}
+
+function generateErrorResponse(err){
+    return "Your vote could not be computed, contact the administration or try to fix the following error: " + err;
+}
+
+app.post('/elections/vote/', function(req, res) {
+    if(req.session.usercode == null || sessions[req.session.usercode] == null){
+        res.send(generateErrorResponse("Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!!"));
         return;
     }
-    res.send(sessions[req.session.usercode]);
+    
+    if(req.body == null || req.body.candidates == null){
+        res.send(generateErrorResponse("No form sent."));
+        return;
+    }
+
+    if(req.body.candidates.length > 5){
+        res.send(generateErrorResponse("You voted for more than 5 candidates, you can only vote 5 or less."));
+    }
+
+    var voteFormContentProcessed = JSON.stringify(req.body, null, 4);
+    console.log(voteFormContentProcessed);
+    fs.writeFile(generateFileName(req.session.usercode), voteFormContentProcessed, 'utf8', function(err){
+        if(err){
+            res.send("Error, contact the administration of the Discourse Discord server!");
+        }else{
+            sessions[req.session.usercode] = null;
+            res.send(generateVoteResponse(req.session.usercode, sessions[req.session.usercode].username, voteFormContentProcessed));
+        }
+    });
+});
+
+app.get('/elections/dash/', function (req, res) {
+    if(req.session.usercode == null || sessions[req.session.usercode] == null){
+        res.send("Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!!");
+    }else{
+        res.sendFile(__dirname+'/elections.dash.html');
+    }
 });
 
 // https://cdn.discordapp.com/avatars/user_id/user_avatar.png
@@ -74,7 +115,7 @@ app.get('/elections/guard/', function (req, res) {
                     }
                  }, function(err,httpResponse,body){
                          let userInfo = JSON.parse(body);
-                         req.session.usercode = randomstring.generate(15) + userInfo;
+                         req.session.usercode = userInfo + "_" + randomstring.generate(15);
                          sessions[req.session.usercode] = userInfo;
     	                 res.sendFile(__dirname+'/elections.guard.html');
                          //res.send(finalString += body);
@@ -93,40 +134,6 @@ app.get('/rules', function (req, res) {
 app.get('/modrules', function (req, res) {
     res.sendFile(__dirname+'/modrules.html');
 });
-
-/*
-function generateFileName(voteId){
-    return __dirname + "/votesDatabase/" + voteId + ".txt";
-}
-
-function generateVoteResponse(id, content){
-    return "Your vote id: <code>"+ id + "</code><br>Your vote formulary:<br><code>" + content + "</code>";
-}
-
-function generateErrorResponse(err){
-    return "Your vote could not be computed, contact the administration or try to fix the following error: " + err;
-}
-
-app.post('/vote', function(req, res) {
-    if(req.body == null || req.body.candidates == null){
-        res.send(generateErrorResponse("No form sent."));
-        return;
-    }
-    if(req.body.candidates.length > 5){
-        res.send(generateErrorResponse("You voted for more than 5 candidates, you can only vote 5 or less."));
-    }
-
-    var voteId = randomstring.generate(5);
-    var voteFormContentProcessed = JSON.stringify(req.body, null, 4);
-    console.log(voteFormContentProcessed);
-    fs.writeFile(generateFileName(voteId), voteFormContentProcessed, 'utf8', function(err){
-        if(err){
-            res.send("Error, contact the administration of the Discourse Discord server!");
-        }else{
-            res.send(generateVoteResponse(voteId, voteFormContentProcessed));
-        }
-    });
-});*/
 
 /*
 app.get('/.well-known/acme-challenge/JTLck0Y7Lf6eatYo2IfTb9EJhYAcOv2ZY0rGHJHVSN0', function (req, res) {
@@ -160,10 +167,10 @@ app.get('/.well-known/acme-challenge/lkjjV2yuJqymbI8AMtqaRsGOSgUt_ALcNYskLDZs9b0
     res.send('lkjjV2yuJqymbI8AMtqaRsGOSgUt_ALcNYskLDZs9b0.46QbIVeOSDdIes_Y5TQ82NrPC6Me0i_nsEUDPGjx7K0');
 });*/
 
-var credentials = { key: fs.readFileSync('/etc/letsencrypt/live/discoursediscord.com/privkey.pem'),
+/*var credentials = { key: fs.readFileSync('/etc/letsencrypt/live/discoursediscord.com/privkey.pem'),
                     cert: fs.readFileSync('/etc/letsencrypt/live/discoursediscord.com/fullchain.pem') };
 
-https.createServer(credentials, app).listen(443);
+https.createServer(credentials, app).listen(443);*/
 
 app.listen(80, function () {
     console.log('Discourse Discord Election Server listening on port 80 and 443!');

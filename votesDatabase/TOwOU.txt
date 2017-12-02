@@ -1,0 +1,9 @@
+{
+    "candidates": [
+        "spilk#9938",
+        "Tayo#1324",
+        "theamatuer#5417",
+        "TomDynamic#4673",
+        "VTomatoma#9227"
+    ]
+}

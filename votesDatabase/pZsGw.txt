@@ -1,0 +1,9 @@
+{
+    "candidates": [
+        "kofеcommi#0299",
+        "Lain#3402",
+        "mop#7182",
+        "Ronald Raygun#4160",
+        "Smackan™#0003"
+    ]
+}

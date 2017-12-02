@@ -12,35 +12,57 @@
     <meta name="author" content="Eugenio Fonseca">
 
     <title>Discourse Discord Elections</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Bootstrap core CSS -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <!-- Custom styles for this template -->
-    <link href="../../css/elections.css" rel="stylesheet">
+    <link href="../../css/electionsdash.css" rel="stylesheet">
   </head>
 
   <body>
     <!-- Eugenio Fonseca -->
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
-        <div class="cover-container" style="width:80%">
-          <div class="masthead clearfix" style="width:50%">
+        <div class="cover-container">
+          <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Discourse Discord</h3>
-              <nav class="nav nav-masthead">
-                <a class="nav-link" href="/">Home</a>
-                <a class="nav-link" href="/rules">Rules</a>
-                <a class="nav-link" href="/modrules">Moderators</a>
-                <a class="nav-link active" href="/elections">Elections</a>
-              </nav>
+              <a style="color: #FFF;" href="https://www.discoursediscord.com/"><h3 class="masthead-brand">Discourse Discord</h3></a>
             </div>
           </div>
           <center>
-            <div class="inner cover" style="width:50%">
-              <h1 class="cover-heading">Discourse Discord</h1>
-              <hr style="background: white;">
-              <p class="lead" id="fetched">{{nickname}}</p>
-              <img src=""></img>
-              <hr style="background: white;">
+            <div class="inner cover">
+                <h1>Discourse Discord 2nd Moderation Elections</h1>
+                <p class="lead">Mark the (maximum 5) folks that you want to see as moderators of the Discourse Discord server.<br>Choose candidates that you trust and see as sensible, honest, mature and responsible!<br>List sorted by time of candidature application.</p>
+                <div class="card text-justify">
+                    <div class="card-header">
+                        Elector Form
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title">Choose a maximum of 5 candidates for moderation that you recommend.</h4>
+                        <form id="voteForm" method="POST" action="/vote">
+                            <p><input class="filled-in" type="checkbox" id="1" name="candidates" value="Cage#5919" /><label for="1" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/cage.jpg" /> Cage#5919</label></p>
+                            <p><input class="filled-in" type="checkbox" id="2" name="candidates" value="dooby#2204" /><label for="2" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/dooby.png" /> dooby#2204</label></p>
+                            <p><input class="filled-in" type="checkbox" id="3" name="candidates" value="Fizzy#5376" /><label for="3" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/fizzy.jpg" /> Fizzy#5376</label></p>
+                            <p><input class="filled-in" type="checkbox" id="4" name="candidates" value="FK#5868" /><label for="4" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/fk.jpg" /> FK#5868</label></p>
+                            <p><input class="filled-in" type="checkbox" id="5" name="candidates" value="florists#0788" /><label for="5" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/florist.jpg" /> florists#0788</label></p>
+                            <p><input class="filled-in" type="checkbox" id="6" name="candidates" value="grim#3881" /><label for="6" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/grim.jpg" /> grim#3881</label></p>
+                            <p><input class="filled-in" type="checkbox" id="7" name="candidates" value="jerry#4805" /><label for="7" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/jerry.jpg" /> jerry#4805</label></p>
+                            <p><input class="filled-in" type="checkbox" id="8" name="candidates" value="John Egbert#1583" /><label for="8" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/john.jpg" /> John Egbert#1583</label></p>
+                            <p><input class="filled-in" type="checkbox" id="9" name="candidates" value="kofеcommi#0299" /><label for="9" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/koffi.jpg" /> kofеcommi#0299</label></p>
+                            <p><input class="filled-in" type="checkbox" id="10" name="candidates" value="Lain#3402" /><label for="10" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/lain.png" /> Lain#3402</label></p>
+                            <p><input class="filled-in" type="checkbox" id="11" name="candidates" value="mop#7182" /><label for="11" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/mop.jpg" /> mop#7182</label></p>
+                            <p><input class="filled-in" type="checkbox" id="12" name="candidates" value="Ronald Raygun#4160" /><label for="12" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/ronald.jpg" /> Ronald Raygun#4160</label></p>
+                            <p><input class="filled-in" type="checkbox" id="13" name="candidates" value="Smackan™#0003" /><label for="13" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/smackban.jpg" /> Smackan™#0003</label></p>
+                            <p><input class="filled-in" type="checkbox" id="14" name="candidates" value="spilk#9938" /><label for="14" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/spilk.jpg" /> spilk#9938</label></p>
+                            <p><input class="filled-in" type="checkbox" id="15" name="candidates" value="Tayo#1324" /><label for="15" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/tayo.jpg" /> Tayo#1324</label></p>
+                            <p><input class="filled-in" type="checkbox" id="16" name="candidates" value="theamatuer#5417" /><label for="16" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/theamateur.jpg" /> theamatuer#5417</label></p>
+                            <p><input class="filled-in" type="checkbox" id="17" name="candidates" value="TomDynamic#4673" /><label for="17" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/tom.jpg" /> TomDynamic#4673</label></p>
+                            <p><input class="filled-in" type="checkbox" id="18" name="candidates" value="VTomatoma#9227" /><label for="18" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/vt.jpg" /> VTomatoma#9227</label></p>
+                            <button type="button" id="confirmBtn" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+              </div>
             </div>
         </center>
           <div class="mastfoot">
@@ -52,8 +74,84 @@
       </div>
     </div>
 
+    <div class="modal" id="confirmModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <br/>
+      <h4 class="card-title">Your candidates:</h4>
+      <hr/>
+      <p id="confirmText"></p>
+      <button type="button" id="confirmBack" class="btn btn-secundary">Go back!</button>
+      <button type="button" id="submitBtn" class="btn btn-primary">Vote!</button>
+    </div>
+
+    <div class="modal" id="responseModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <br/>
+        <h4 class="card-title">Vote feedback!</h4>
+        <hr/>
+        <p id="response"></p>
+        <a href="https://discoursediscord.com/elections" class="btn btn-primary">Thanks!</a>
+    </div>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../../js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+      let candidates = [];
+
+      $('.modal').modal({
+          dismissible: false
+      });
+
+      $(".filled-in").prop("checked", false);
+
+      $(".filled-in").change(function() {
+        var voteContent = $("#voteForm").serializeArray();
+        var numberOfVotes = 0;
+        for(var obj of voteContent){
+            if(obj.name == "candidates") numberOfVotes++;
+        }
+        if(numberOfVotes > 5){
+          $(this).prop("checked", false);
+        }
+    });
+    
+    function showResponseModal(msg){
+      $('.modal').modal('close');
+      $("#response").html(msg);
+      $('#responseModal').modal('open');
+    }
+
+    function showConfirmModal(msg){
+      $('.modal').modal('close');
+      $("#confirmText").html(msg);
+      $('#confirmModal').modal('open');
+    }
+
+    $("#confirmBack").click(function(){
+      $('#confirmModal').modal('close');
+    });
+
+    $("#confirmBtn").click(function(){
+        var voteContent = $("#voteForm").serializeArray();
+        var stringVotes = "";
+        var numberOfVotes = 0;
+        for(var obj of voteContent){
+            if(obj.name == "candidates") numberOfVotes++;
+            stringVotes += obj.value + "<br/>";
+        }
+        if(numberOfVotes > 5){
+          stringVotes += "You can only vote for 5 (five) candidates for your vote to be counted and validated, try again!";
+        }
+        showConfirmModal(stringVotes);
+    });
+
+    $("#submitBtn").click(function(){
+      var voteContent = $("#voteForm").serializeArray();
+      console.log("sending "+voteContent);
+      $.post("/elections/vote", $("#voteForm").serialize()).done(function( data ) {
+        showResponseModal(data);
+      });
+    });
+    </script>
 </html>

@@ -1,0 +1,9 @@
+{
+    "candidates": [
+        "florists#0788",
+        "grim#3881",
+        "jerry#4805",
+        "kofеcommi#0299",
+        "Lain#3402"
+    ]
+}

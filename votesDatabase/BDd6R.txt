@@ -1,0 +1,9 @@
+{
+    "candidates": [
+        "Lain#3402",
+        "mop#7182",
+        "Ronald Raygun#4160",
+        "Smackan™#0003",
+        "spilk#9938"
+    ]
+}
