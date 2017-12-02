@@ -70,14 +70,17 @@ app.post('/elections/vote/', function(req, res) {
         res.send(generateErrorResponse("You voted for more than 5 candidates, you can only vote 5 or less."));
     }
 
-    var voteFormContentProcessed = JSON.stringify(req.body, null, 4);
+    var voteFormContentProcessed = JSON.stringify(req.body, null, 4) + "\n" +  JSON.stringify(sessions[req.session.usercode], null, 4);
     console.log(voteFormContentProcessed);
     fs.writeFile(generateFileName(req.session.usercode), voteFormContentProcessed, 'utf8', function(err){
         if(err){
-            res.send("Error, contact the administration of the Discourse Discord server!");
+            res.send("Error while storing your vote, contact the administration of the Discourse Discord server!");
+            return;
         }else{
+            let username = sessions[req.session.usercode].username;
             sessions[req.session.usercode] = null;
-            res.send(generateVoteResponse(req.session.usercode, sessions[req.session.usercode].username, voteFormContentProcessed));
+            res.send(generateVoteResponse(req.session.usercode, username, voteFormContentProcessed));
+            return;
         }
     });
 });
@@ -115,10 +118,9 @@ app.get('/elections/guard/', function (req, res) {
                     }
                  }, function(err,httpResponse,body){
                          let userInfo = JSON.parse(body);
-                         req.session.usercode = userInfo + "_" + randomstring.generate(15);
+                         req.session.usercode = userInfo.id + "_" + randomstring.generate(15);
                          sessions[req.session.usercode] = userInfo;
     	                 res.sendFile(__dirname+'/elections.guard.html');
-                         //res.send(finalString += body);
                  });
         });
 });
@@ -167,10 +169,10 @@ app.get('/.well-known/acme-challenge/lkjjV2yuJqymbI8AMtqaRsGOSgUt_ALcNYskLDZs9b0
     res.send('lkjjV2yuJqymbI8AMtqaRsGOSgUt_ALcNYskLDZs9b0.46QbIVeOSDdIes_Y5TQ82NrPC6Me0i_nsEUDPGjx7K0');
 });*/
 
-/*var credentials = { key: fs.readFileSync('/etc/letsencrypt/live/discoursediscord.com/privkey.pem'),
+var credentials = { key: fs.readFileSync('/etc/letsencrypt/live/discoursediscord.com/privkey.pem'),
                     cert: fs.readFileSync('/etc/letsencrypt/live/discoursediscord.com/fullchain.pem') };
 
-https.createServer(credentials, app).listen(443);*/
+https.createServer(credentials, app).listen(443);
 
 app.listen(80, function () {
     console.log('Discourse Discord Election Server listening on port 80 and 443!');
