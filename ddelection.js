@@ -57,7 +57,7 @@ function generateErrorResponse(err){
 
 app.get('/elections/whoami/', function (req, res) {
     if(req.session.usercode == null || sessions[req.session.usercode] == null){
-        res.send("Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!!");
+        res.send('Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!! <a href="https://www.discoursediscord.com/">Home</a>');
     }else{
         let userObject = sessions[req.session.usercode];
         res.send('You are   <img class="rounded-circle" style="width:48px" src="https://cdn.discordapp.com/avatars/' + userObject.id +'/' + userObject.avatar + '">  '
@@ -67,7 +67,7 @@ app.get('/elections/whoami/', function (req, res) {
 
 app.post('/elections/vote/', function(req, res) {
     if(req.session.usercode == null || sessions[req.session.usercode] == null){
-        res.send(generateErrorResponse("Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!!"));
+        res.send(generateErrorResponse('Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!! <a href="https://www.discoursediscord.com/">Home</a>'));
         return;
     }
     
@@ -86,7 +86,7 @@ app.post('/elections/vote/', function(req, res) {
     let voteFormContentProcessed = JSON.stringify(userObject, null, 4);
     fs.writeFile(generateFileName(req.session.usercode), voteFormContentProcessed, 'utf8', function(err){
         if(err){
-            res.send("Error while storing your vote, contact the administration of the Discourse Discord server!");
+            res.send('Error while storing your vote, contact the administration of the Discourse Discord server! <a href="https://www.discoursediscord.com/">Home</a>');
             return;
         }else{
             let username = sessions[req.session.usercode].username;
