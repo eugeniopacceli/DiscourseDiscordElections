@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var randomstring = require("randomstring");
 var https = require('https');
 var fs = require('fs');
+var request = require('request');
+var session = require('express-session');
 var app = express();
 
 app.use('/js', express.static(__dirname + '/js'));
@@ -11,7 +13,16 @@ app.use('/css', express.static(__dirname + '/css'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
-})); 
+}));
+app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+  secret: 'discourseDiscordElectionsv1',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}));
+
+var sessions = {}; 
 
 /*
 function ensureSecure(req, res, next){
@@ -24,8 +35,51 @@ function ensureSecure(req, res, next){
 app.all('*', ensureSecure);
 */
 
+app.get('/elections/', function (req, res) {
+    res.sendFile(__dirname+'/elections.html');
+});
+
+
+app.get('/elections/dash/', function (req, res) {
+//    res.sendFile(__dirname+'/elections.dash.html');
+    if(sessions[req.session.usercode == null]){
+        res.send("Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!!");
+        return;
+    }
+    res.send(sessions[req.session.usercode]);
+});
+
+// https://cdn.discordapp.com/avatars/user_id/user_avatar.png
+
 app.get('/elections/guard/', function (req, res) {
-    res.send('Thanks! However, this is a placeholder and nothing was done with your information. - Eugenio');
+    if(req.query.code == null || req.query.code == '' || req.query.state == null || req.query.state == ''){
+        res.sendFile(__dirname+'/elections.html');
+    }
+    request.post(
+        {
+            url:'https://discordapp.com/api/oauth2/token',
+            form: {client_id:'382330416931143691',
+                    client_secret: '_kqTfI3f7iR1eJhWId0AvF_Ac5gy96kq',
+                    grant_type: 'authorization_code',
+                    code: req.query.code,
+                    redirect_uri: 'https://discoursediscord.com/elections/guard/'
+            }
+        }, function(err,httpResponse,body){
+            var bodyParsed = JSON.parse(body);
+            request.get(
+                {
+                    url:'https://discordapp.com/api/users/@me',
+                    headers: {
+                         'Authorization': 'Bearer ' + bodyParsed.access_token
+                    }
+                 }, function(err,httpResponse,body){
+                         let userInfo = JSON.parse(body);
+                         req.session.usercode = randomstring.generate(15) + userInfo;
+                         sessions[req.session.usercode] = userInfo;
+    	                 res.sendFile(__dirname+'/elections.guard.html');
+                         //res.send(finalString += body);
+                 });
+        });
 });
 
 app.get('/', function (req, res) {
