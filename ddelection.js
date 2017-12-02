@@ -60,7 +60,7 @@ app.get('/elections/whoami/', function (req, res) {
         res.send("Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!!");
     }else{
         let userObject = sessions[req.session.usercode];
-        res.send('<img class="rounded-circle" style="width:48px" src="https://cdn.discordapp.com/avatars/' + userObject.id +'/' + userObject.avatar + '/>  "'
+        res.send('You are   <img class="rounded-circle" style="width:48px" src="https://cdn.discordapp.com/avatars/' + userObject.id +'/' + userObject.avatar + '">  '
                  + userObject.username + "#" + userObject.discriminator);
     }
 });
@@ -80,8 +80,10 @@ app.post('/elections/vote/', function(req, res) {
         res.send(generateErrorResponse("You voted for more than 5 candidates, you can only vote 5 or less."));
     }
 
-    var voteFormContentProcessed = JSON.stringify(req.body, null, 4) + "\n" +  JSON.stringify(sessions[req.session.usercode], null, 4);
-    console.log(voteFormContentProcessed);
+    let userObject = sessions[req.session.usercode];
+    userObject.votes = req.body;
+    userObject.date = (new Date()).toString();
+    let voteFormContentProcessed = JSON.stringify(userObject, null, 4);
     fs.writeFile(generateFileName(req.session.usercode), voteFormContentProcessed, 'utf8', function(err){
         if(err){
             res.send("Error while storing your vote, contact the administration of the Discourse Discord server!");
