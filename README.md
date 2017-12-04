@@ -7,7 +7,7 @@ To run this project, make sure you have a valid Discord OAuth 2 registered appli
 
 `runforever.sh` starts the server and guards for crashes.
 
-`ddelection.js` also assumes you have a valid SSL certificate, as it runs only on HTTPs to store user's session values.
+`ddelection.js` also assumes you have a valid SSL certificate, as it runs only on HTTPS to store user's session values.
 
 This is still a work in progress.
 
