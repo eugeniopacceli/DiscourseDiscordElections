@@ -45,7 +45,7 @@ function generateFileName(voteId){
 }
 
 function generateVoteResponse(id, username, content){
-    return "Your vote id: <code>"+ id + "</code><br/>" +
+    return "<h2>Congratulations, your vote was computed!</h2><br/>Your vote id: <code>"+ id + "</code><br/>" +
            "Your Discord username: <code>" + username + "</code><br/>" +
            "Your vote formulary:<br><code>" + content +
            "</code><hr/><p>You may vote again by coming back, doing so will overwrite your last vote. Thank you for participating!</p>";
@@ -76,8 +76,9 @@ app.post('/elections/vote/', function(req, res) {
         return;
     }
 
-    if(req.body.candidates.length > 5){
+    if(Array.isArray(req.body.candidates) && req.body.candidates.length > 5){
         res.send(generateErrorResponse("You voted for more than 5 candidates, you can only vote 5 or less."));
+        return;
     }
 
     let userObject = sessions[req.session.usercode];
@@ -99,7 +100,7 @@ app.post('/elections/vote/', function(req, res) {
 
 app.get('/elections/dash/', function (req, res) {
     if(req.session.usercode == null || sessions[req.session.usercode] == null){
-        res.send("Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!!");
+        res.send('Bro/sis, there was an error in validating your session, go back to the election main page and start the authentication proccess again. Sorry!!<a href="https://www.discoursediscord.com/">Home</a>');
     }else{
         res.sendFile(__dirname+'/elections.dash.html');
     }
@@ -113,7 +114,7 @@ app.get('/elections/guard/', function (req, res) {
         {
             url:'https://discordapp.com/api/oauth2/token',
             form: {client_id:'382330416931143691',
-                    client_secret: '_kqTfI3f7iR1eJhWId0AvF_Ac5gy96kq',
+                    client_secret: '<!-- SECRET --!>',
                     grant_type: 'authorization_code',
                     code: req.query.code,
                     redirect_uri: 'https://discoursediscord.com/elections/guard/'

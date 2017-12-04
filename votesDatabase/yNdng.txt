@@ -1,9 +1,0 @@
-{
-    "candidates": [
-        "Lain#3402",
-        "mop#7182",
-        "Ronald Raygun#4160",
-        "spilk#9938",
-        "Tayo#1324"
-    ]
-}

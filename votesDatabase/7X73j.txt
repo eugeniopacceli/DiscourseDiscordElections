@@ -1,9 +1,0 @@
-{
-    "candidates": [
-        "Smackan™#0003",
-        "spilk#9938",
-        "Tayo#1324",
-        "theamatuer#5417",
-        "TomDynamic#4673"
-    ]
-}
