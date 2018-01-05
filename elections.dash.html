@@ -84,28 +84,28 @@
     <script>
       let candidates = [];
       let uicandidates = [
-        { name: "BOXER#0774", avatar: "boxer.webp" },
+        { name: "BOXER#0774", avatar: "boxer.png" },
         { name: "squishy#0399", avatar: "squishy.png" },
-        { name: "rndrflotilla#9491 (rustie)", avatar: "rustie.webp" },
-        { name: "Fizzy#5376", avatar: "fizzy.webp" },
-        { name: "Triggernomics#4142", avatar: "trigger.webp" },
-        { name: "Merc#2621", avatar: "merc.webp" },
-        { name: "VTomatoma#9227", avatar: "vttomatoma.webp" },
-        { name: "Timo Salterson#3782", avatar: "timosalterson.webp" },
-        { name: "🤶Geim🤶#1245", avatar: "geim.webp" },
-        { name: "Deleted account#9378 (DJ)", avatar: "dj.webp" },
-        { name: "￼￼￼￼￼￼￼￼￼Alex#3402 (𝓚𝓪𝓶𝓲-𝓼𝓪𝓶𝓪)", avatar: "lain.webp" },
-        { name: "☭Анатолий☭#5986", avatar: "ahatomn.webp" },
-        { name: "TomDynamic#4673", avatar: "tomdynamic.webp" },
-        { name: "/r/Trump#7886", avatar: "rtrump.webp" },
-        { name: "spilk#9938", avatar: "spilk.webp" },
-        { name: "Ratpack#7447", avatar: "ratpack.webp" },
-        { name: "florists#0788", avatar: "florist.webp" },
-        { name: "kofеcommi ☕#0299", avatar: "koffecommi.webp" },
-        { name: "ㄒ尺丨几Ꮆㄥ乇#3427", avatar: "tringle.webp" },
-        { name: "FK#5868", avatar: "fk.webp" },
-        { name: "Hekate#1306 (Naho The Pupperless)", avatar: "naho.webp" },
-        { name: "Sylvanas#2143", avatar: "sylvanas.webp"}
+        { name: "rndrflotilla#9491 (rustie)", avatar: "rustie.png" },
+        { name: "Fizzy#5376", avatar: "fizzy.png" },
+        { name: "Triggernomics#4142", avatar: "trigger.png" },
+        { name: "Merc#2621", avatar: "merc.png" },
+        { name: "VTomatoma#9227", avatar: "vttomatoma.png" },
+        { name: "Timo Salterson#3782", avatar: "timosalterson.png" },
+        { name: "🤶Geim🤶#1245", avatar: "geim.png" },
+        { name: "Deleted account#9378 (DJ)", avatar: "dj.png" },
+        { name: "￼￼￼￼￼￼￼￼￼Alex#3402 (𝓚𝓪𝓶𝓲-𝓼𝓪𝓶𝓪)", avatar: "lain.png" },
+        { name: "☭Анатолий☭#5986", avatar: "ahatomn.png" },
+        { name: "TomDynamic#4673", avatar: "tomdynamic.png" },
+        { name: "/r/Trump#7886", avatar: "rtrump.png" },
+        { name: "spilk#9938", avatar: "spilk.png" },
+        { name: "Ratpack#7447", avatar: "ratpack.png" },
+        { name: "florists#0788", avatar: "florist.png" },
+        { name: "kofеcommi ☕#0299", avatar: "koffecommi.png" },
+        { name: "ㄒ尺丨几Ꮆㄥ乇#3427", avatar: "tringle.png" },
+        { name: "FK#5868", avatar: "fk.png" },
+        { name: "Hekate#1306 (Naho The Pupperless)", avatar: "naho.png" },
+        { name: "Sylvanas#2143", avatar: "sylvanas.png"}
       ];
 
       function shuffleArray(array) {
@@ -113,6 +113,7 @@
           let j = Math.floor(Math.random() * (i + 1));
           [array[i], array[j]] = [array[j], array[i]];
         }
+        return array;
       }
 
       function sortAndPrint(candidatesData){
