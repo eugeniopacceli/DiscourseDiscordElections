@@ -1,0 +1,15 @@
+{
+    "username": "Lain",
+    "discriminator": "3402",
+    "mfa_enabled": false,
+    "id": "193951305746612224",
+    "avatar": "a_cb327822ab7c0c57bbff17c6a2ad5486",
+    "votes": {
+        "candidates": [
+            "FK#5868",
+            "Lain#3402",
+            "Tayo#1324"
+        ]
+    },
+    "date": "Sat Dec 02 2017 22:28:42 GMT+0000 (UTC)"
+}

@@ -1,0 +1,14 @@
+{
+    "username": "Irma",
+    "discriminator": "2035",
+    "mfa_enabled": false,
+    "id": "353641498237206529",
+    "avatar": "a39b323653e24a8ac826a7f1f3866533",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "VTomatoma#9227"
+        ]
+    },
+    "date": "Sat Dec 02 2017 23:17:10 GMT+0000 (UTC)"
+}

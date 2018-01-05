@@ -1,0 +1,17 @@
+{
+    "username": "mop",
+    "discriminator": "7182",
+    "mfa_enabled": false,
+    "id": "157182982120144897",
+    "avatar": "1050fe681b5203a139df32b1c05ba6e1",
+    "votes": {
+        "candidates": [
+            "florists#0788",
+            "jerry#4805",
+            "kofеcommi#0299",
+            "mop#7182",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sat Dec 02 2017 21:30:06 GMT+0000 (UTC)"
+}

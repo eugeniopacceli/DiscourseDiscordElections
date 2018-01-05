@@ -1,0 +1,17 @@
+{
+    "username": "Smackan™",
+    "discriminator": "0003",
+    "mfa_enabled": false,
+    "id": "258154361874546689",
+    "avatar": "ace1a9e17f1894c976b4ba68ef95130e",
+    "votes": {
+        "candidates": [
+            "FK#5868",
+            "kofеcommi#0299",
+            "Smackan™#0003",
+            "Tayo#1324",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sat Dec 02 2017 22:26:39 GMT+0000 (UTC)"
+}

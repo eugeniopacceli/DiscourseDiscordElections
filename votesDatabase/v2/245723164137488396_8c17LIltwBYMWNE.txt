@@ -1,0 +1,17 @@
+{
+    "username": "dorkachu",
+    "discriminator": "6954",
+    "mfa_enabled": false,
+    "id": "245723164137488396",
+    "avatar": "ac1279714db4a0354296ae5664f589c2",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "John Egbert#1583",
+            "kofеcommi#0299",
+            "Tayo#1324"
+        ]
+    },
+    "date": "Sun Dec 03 2017 22:57:30 GMT+0000 (UTC)"
+}

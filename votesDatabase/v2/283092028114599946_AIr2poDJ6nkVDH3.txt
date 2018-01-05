@@ -1,0 +1,17 @@
+{
+    "username": "Shively",
+    "discriminator": "1601",
+    "mfa_enabled": false,
+    "id": "283092028114599946",
+    "avatar": "41b1ef93cb6591f095dc82ae6805fc5d",
+    "votes": {
+        "candidates": [
+            "FK#5868",
+            "grim#3881",
+            "Ronald Raygun#4160",
+            "Tayo#1324",
+            "VTomatoma#9227"
+        ]
+    },
+    "date": "Sat Dec 02 2017 23:35:35 GMT+0000 (UTC)"
+}

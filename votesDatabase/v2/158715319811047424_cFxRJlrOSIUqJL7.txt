@@ -1,0 +1,17 @@
+{
+    "username": "Tayo",
+    "discriminator": "1324",
+    "mfa_enabled": false,
+    "id": "158715319811047424",
+    "avatar": "a40de16064db4a3e4530d0f139244889",
+    "votes": {
+        "candidates": [
+            "Cage#5919",
+            "dooby#2204",
+            "FK#5868",
+            "Smackan™#0003",
+            "Tayo#1324"
+        ]
+    },
+    "date": "Sun Dec 03 2017 04:42:46 GMT+0000 (UTC)"
+}

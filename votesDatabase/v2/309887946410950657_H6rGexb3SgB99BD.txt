@@ -1,0 +1,17 @@
+{
+    "username": "Hekate",
+    "discriminator": "1306",
+    "mfa_enabled": false,
+    "id": "309887946410950657",
+    "avatar": "64742eaa41a172862cb715a39163e1cc",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "kofеcommi#0299",
+            "spilk#9938",
+            "Tayo#1324"
+        ]
+    },
+    "date": "Sat Dec 02 2017 21:29:21 GMT+0000 (UTC)"
+}

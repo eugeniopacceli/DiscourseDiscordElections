@@ -1,0 +1,17 @@
+{
+    "username": "Greenjacketguy",
+    "discriminator": "8783",
+    "mfa_enabled": true,
+    "id": "184848346240778240",
+    "avatar": "25fb572b1a0f3c6c7af6dc626542c28c",
+    "votes": {
+        "candidates": [
+            "John Egbert#1583",
+            "kofеcommi#0299",
+            "mop#7182",
+            "spilk#9938",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sun Dec 03 2017 03:47:29 GMT+0000 (UTC)"
+}

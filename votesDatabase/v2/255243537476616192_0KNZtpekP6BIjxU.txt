@@ -1,0 +1,17 @@
+{
+    "username": "dantalion",
+    "discriminator": "2767",
+    "mfa_enabled": false,
+    "id": "255243537476616192",
+    "avatar": null,
+    "votes": {
+        "candidates": [
+            "Cage#5919",
+            "FK#5868",
+            "grim#3881",
+            "Tayo#1324",
+            "TomDynamic#4673"
+        ]
+    },
+    "date": "Sat Dec 02 2017 21:35:14 GMT+0000 (UTC)"
+}

@@ -1,0 +1,17 @@
+{
+    "username": "a_shiny_coin",
+    "discriminator": "2280",
+    "mfa_enabled": false,
+    "id": "350065943201841173",
+    "avatar": null,
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "jerry#4805",
+            "spilk#9938",
+            "Tayo#1324"
+        ]
+    },
+    "date": "Mon Dec 04 2017 03:41:56 GMT+0000 (UTC)"
+}

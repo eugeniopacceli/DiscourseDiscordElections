@@ -1,0 +1,14 @@
+{
+    "username": "Kensai",
+    "discriminator": "1325",
+    "mfa_enabled": false,
+    "id": "146766351736766464",
+    "avatar": "36937c4cc0e31210e0961c6c911e8104",
+    "votes": {
+        "candidates": [
+            "FK#5868",
+            "Ronald Raygun#4160"
+        ]
+    },
+    "date": "Mon Dec 04 2017 03:42:13 GMT+0000 (UTC)"
+}

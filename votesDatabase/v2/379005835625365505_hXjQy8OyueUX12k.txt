@@ -1,0 +1,17 @@
+{
+    "username": "Zuki",
+    "discriminator": "8751",
+    "mfa_enabled": false,
+    "id": "379005835625365505",
+    "avatar": "c8cb71514e2a9d978da1b66f3a3cea18",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "Fizzy#5376",
+            "FK#5868",
+            "Tayo#1324",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sun Dec 03 2017 01:09:59 GMT+0000 (UTC)"
+}

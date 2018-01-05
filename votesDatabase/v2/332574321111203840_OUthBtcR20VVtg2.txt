@@ -1,0 +1,17 @@
+{
+    "username": "Spasmodic-Colon",
+    "discriminator": "5717",
+    "mfa_enabled": false,
+    "id": "332574321111203840",
+    "avatar": "dd4cb1b62a78c61d4833d8694a7809ae",
+    "votes": {
+        "candidates": [
+            "florists#0788",
+            "kofеcommi#0299",
+            "mop#7182",
+            "spilk#9938",
+            "tringle#3427"
+        ]
+    },
+    "date": "Mon Dec 04 2017 02:10:34 GMT+0000 (UTC)"
+}

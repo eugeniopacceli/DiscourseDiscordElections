@@ -1,0 +1,17 @@
+{
+    "username": "poncho880",
+    "discriminator": "6614",
+    "mfa_enabled": true,
+    "id": "315206641647616000",
+    "avatar": "95ed7882c6919c22226a6291784c40a1",
+    "votes": {
+        "candidates": [
+            "Cage#5919",
+            "FK#5868",
+            "Smackan™#0003",
+            "spilk#9938",
+            "Tayo#1324"
+        ]
+    },
+    "date": "Sun Dec 03 2017 22:54:54 GMT+0000 (UTC)"
+}

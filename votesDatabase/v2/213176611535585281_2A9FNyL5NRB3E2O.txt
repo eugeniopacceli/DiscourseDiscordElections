@@ -1,0 +1,17 @@
+{
+    "username": "pupper",
+    "discriminator": "3286",
+    "mfa_enabled": false,
+    "id": "213176611535585281",
+    "avatar": "aeec7d8131faf76a8a72255008f4c07b",
+    "votes": {
+        "candidates": [
+            "kofеcommi#0299",
+            "spilk#9938",
+            "Tayo#1324",
+            "TomDynamic#4673",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sat Dec 02 2017 23:46:30 GMT+0000 (UTC)"
+}

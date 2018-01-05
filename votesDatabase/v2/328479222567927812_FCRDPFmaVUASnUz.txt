@@ -1,0 +1,17 @@
+{
+    "username": "tringle",
+    "discriminator": "3427",
+    "mfa_enabled": false,
+    "id": "328479222567927812",
+    "avatar": "ebc9da64a790bc91c0cc5e433907bb15",
+    "votes": {
+        "candidates": [
+            "FK#5868",
+            "florists#0788",
+            "Ronald Raygun#4160",
+            "Tayo#1324",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sat Dec 02 2017 23:35:04 GMT+0000 (UTC)"
+}

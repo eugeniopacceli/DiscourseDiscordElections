@@ -1,0 +1,17 @@
+{
+    "username": "spilk",
+    "discriminator": "9938",
+    "mfa_enabled": true,
+    "id": "298850702917238784",
+    "avatar": "80bbb7a27f108625a30b50c0134aac33",
+    "votes": {
+        "candidates": [
+            "Fizzy#5376",
+            "florists#0788",
+            "John Egbert#1583",
+            "kofеcommi#0299",
+            "spilk#9938"
+        ]
+    },
+    "date": "Sat Dec 02 2017 22:59:11 GMT+0000 (UTC)"
+}

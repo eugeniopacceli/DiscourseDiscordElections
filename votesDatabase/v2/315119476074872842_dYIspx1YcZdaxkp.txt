@@ -1,0 +1,17 @@
+{
+    "username": "meme",
+    "discriminator": "3097",
+    "mfa_enabled": false,
+    "id": "315119476074872842",
+    "avatar": "890afacfc0783c633d1288e2845031eb",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "kofеcommi#0299",
+            "Ronald Raygun#4160",
+            "spilk#9938",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sat Dec 02 2017 22:28:17 GMT+0000 (UTC)"
+}

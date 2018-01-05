@@ -1,0 +1,17 @@
+{
+    "username": "Fizzy",
+    "discriminator": "5376",
+    "mfa_enabled": false,
+    "id": "144017126166888448",
+    "avatar": "fbbcda1252452147dc5181bbbff227ef",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "Fizzy#5376",
+            "Ronald Raygun#4160",
+            "Tayo#1324",
+            "TomDynamic#4673"
+        ]
+    },
+    "date": "Sun Dec 03 2017 23:50:22 GMT+0000 (UTC)"
+}

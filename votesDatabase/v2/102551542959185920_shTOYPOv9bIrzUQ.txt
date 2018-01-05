@@ -1,0 +1,17 @@
+{
+    "username": "Ronald Raygun",
+    "discriminator": "4160",
+    "mfa_enabled": true,
+    "id": "102551542959185920",
+    "avatar": "b5441704658a0177cb0743474e2d6e9a",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "Fizzy#5376",
+            "kofеcommi#0299",
+            "Tayo#1324",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sat Dec 02 2017 21:29:19 GMT+0000 (UTC)"
+}

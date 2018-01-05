@@ -1,0 +1,11 @@
+{
+    "username": "leftclickehhh for life",
+    "discriminator": "0549",
+    "mfa_enabled": false,
+    "id": "217238669424066560",
+    "avatar": "2cec1dc42fa664b548a1e3c351b48e6b",
+    "votes": {
+        "candidates": "kofеcommi#0299"
+    },
+    "date": "Sat Dec 02 2017 22:01:47 GMT+0000 (UTC)"
+}

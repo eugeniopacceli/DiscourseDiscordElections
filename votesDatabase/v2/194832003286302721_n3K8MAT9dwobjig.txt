@@ -1,0 +1,14 @@
+{
+    "username": "☭Анатолий☭",
+    "discriminator": "5986",
+    "mfa_enabled": false,
+    "id": "194832003286302721",
+    "avatar": "356608e74e3864cf593d540fd8effb99",
+    "votes": {
+        "candidates": [
+            "Fizzy#5376",
+            "FK#5868"
+        ]
+    },
+    "date": "Mon Dec 04 2017 13:54:52 GMT+0000 (UTC)"
+}

@@ -1,0 +1,17 @@
+{
+    "username": "CheesyTacos",
+    "discriminator": "3008",
+    "mfa_enabled": false,
+    "id": "321387972375085056",
+    "avatar": "7fb526f9bbf79096caec8956d4b09c5b",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "kofеcommi#0299",
+            "spilk#9938",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sat Dec 02 2017 21:52:15 GMT+0000 (UTC)"
+}

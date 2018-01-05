@@ -1,0 +1,17 @@
+{
+    "username": "jerry",
+    "discriminator": "4805",
+    "mfa_enabled": true,
+    "id": "256625077087502338",
+    "avatar": "4c4cb3e9a00eaff2746f1bfbcc7d6564",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "jerry#4805",
+            "Tayo#1324",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sun Dec 03 2017 01:16:50 GMT+0000 (UTC)"
+}

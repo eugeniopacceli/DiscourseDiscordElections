@@ -1,0 +1,17 @@
+{
+    "username": "Jake.",
+    "discriminator": "4587",
+    "mfa_enabled": false,
+    "id": "370742642029363221",
+    "avatar": "f334ab23eb368b515b2fb47f0f465825",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "grim#3881",
+            "spilk#9938",
+            "Tayo#1324"
+        ]
+    },
+    "date": "Sat Dec 02 2017 22:42:58 GMT+0000 (UTC)"
+}

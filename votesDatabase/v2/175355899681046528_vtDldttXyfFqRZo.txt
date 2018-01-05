@@ -1,0 +1,11 @@
+{
+    "username": "magnushmann",
+    "discriminator": "8011",
+    "mfa_enabled": false,
+    "id": "175355899681046528",
+    "avatar": "d9fa56620446dcd8333c62282f70f1bc",
+    "votes": {
+        "candidates": "FK#5868"
+    },
+    "date": "Mon Dec 04 2017 07:39:01 GMT+0000 (UTC)"
+}

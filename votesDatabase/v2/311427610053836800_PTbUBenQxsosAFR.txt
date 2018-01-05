@@ -1,0 +1,17 @@
+{
+    "username": "kofеcommi",
+    "discriminator": "0299",
+    "mfa_enabled": false,
+    "id": "311427610053836800",
+    "avatar": "1a562395fbb81a4269dc3f6be752a258",
+    "votes": {
+        "candidates": [
+            "Cage#5919",
+            "dooby#2204",
+            "florists#0788",
+            "kofеcommi#0299",
+            "spilk#9938"
+        ]
+    },
+    "date": "Sat Dec 02 2017 21:30:36 GMT+0000 (UTC)"
+}

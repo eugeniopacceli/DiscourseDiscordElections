@@ -1,0 +1,11 @@
+{
+    "username": "/r/Trump",
+    "discriminator": "7886",
+    "mfa_enabled": false,
+    "id": "239844567476600833",
+    "avatar": "24a1003f01f7158aede565a619396996",
+    "votes": {
+        "candidates": "dooby#2204"
+    },
+    "date": "Sat Dec 02 2017 23:24:17 GMT+0000 (UTC)"
+}

@@ -1,0 +1,17 @@
+{
+    "username": "Atlantica Polari",
+    "discriminator": "5082",
+    "mfa_enabled": false,
+    "id": "374360493948928002",
+    "avatar": "1ea247bf163b0fcd26ba278c9a6fd138",
+    "votes": {
+        "candidates": [
+            "Cage#5919",
+            "dooby#2204",
+            "FK#5868",
+            "Ronald Raygun#4160",
+            "Smackan™#0003"
+        ]
+    },
+    "date": "Sun Dec 03 2017 22:56:30 GMT+0000 (UTC)"
+}

@@ -1,0 +1,17 @@
+{
+    "username": "Grisk",
+    "discriminator": "0416",
+    "mfa_enabled": false,
+    "id": "248322759027851277",
+    "avatar": "9f6fd98454260ff26bf46bf6fb072e4e",
+    "votes": {
+        "candidates": [
+            "florists#0788",
+            "mop#7182",
+            "Ronald Raygun#4160",
+            "TomDynamic#4673",
+            "VTomatoma#9227"
+        ]
+    },
+    "date": "Mon Dec 04 2017 03:41:33 GMT+0000 (UTC)"
+}

@@ -1,0 +1,17 @@
+{
+    "username": "molis",
+    "discriminator": "9358",
+    "mfa_enabled": false,
+    "id": "351816806651920385",
+    "avatar": "3834f52a2540d741d9276d190ac21111",
+    "votes": {
+        "candidates": [
+            "Fizzy#5376",
+            "kofеcommi#0299",
+            "Ronald Raygun#4160",
+            "Smackan™#0003",
+            "spilk#9938"
+        ]
+    },
+    "date": "Sat Dec 02 2017 23:02:24 GMT+0000 (UTC)"
+}

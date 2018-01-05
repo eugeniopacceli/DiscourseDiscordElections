@@ -1,0 +1,17 @@
+{
+    "username": "FK",
+    "discriminator": "5868",
+    "mfa_enabled": false,
+    "id": "162805609949954048",
+    "avatar": "48b240f7471ad031a1bfecf6be3dbec7",
+    "votes": {
+        "candidates": [
+            "Cage#5919",
+            "dooby#2204",
+            "FK#5868",
+            "Ronald Raygun#4160",
+            "Tayo#1324"
+        ]
+    },
+    "date": "Sat Dec 02 2017 21:19:46 GMT+0000 (UTC)"
+}

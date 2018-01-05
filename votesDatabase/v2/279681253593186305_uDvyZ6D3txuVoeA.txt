@@ -1,0 +1,17 @@
+{
+    "username": "NightOwl 🧐",
+    "discriminator": "6567",
+    "mfa_enabled": false,
+    "id": "279681253593186305",
+    "avatar": "aed1a809f09914d2fd8311ef59a01845",
+    "votes": {
+        "candidates": [
+            "Cage#5919",
+            "jerry#4805",
+            "Smackan™#0003",
+            "spilk#9938",
+            "Triggernomics#4142"
+        ]
+    },
+    "date": "Sun Dec 03 2017 18:15:13 GMT+0000 (UTC)"
+}

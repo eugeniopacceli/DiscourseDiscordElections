@@ -1,0 +1,16 @@
+{
+    "username": "Niggywiggy",
+    "discriminator": "6914",
+    "mfa_enabled": false,
+    "id": "119252359099449344",
+    "avatar": "2b77acd46010a4bf150a1b7c9e435b99",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "spilk#9938",
+            "Tayo#1324"
+        ]
+    },
+    "date": "Sun Dec 03 2017 04:13:48 GMT+0000 (UTC)"
+}

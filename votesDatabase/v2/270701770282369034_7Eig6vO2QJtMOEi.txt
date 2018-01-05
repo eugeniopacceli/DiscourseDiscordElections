@@ -1,0 +1,17 @@
+{
+    "username": "ThatSass",
+    "discriminator": "9979",
+    "mfa_enabled": true,
+    "id": "270701770282369034",
+    "avatar": "8031703eb1a9adb33c2203ee13d6b234",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "kofеcommi#0299",
+            "Tayo#1324",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sun Dec 03 2017 06:16:31 GMT+0000 (UTC)"
+}

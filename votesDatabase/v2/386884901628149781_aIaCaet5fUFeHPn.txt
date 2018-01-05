@@ -1,0 +1,17 @@
+{
+    "username": "MeMeBigBoy",
+    "discriminator": "6863",
+    "mfa_enabled": false,
+    "id": "386884901628149781",
+    "avatar": "398ebba1e5ce0f1aada65198202df275",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "Smackan™#0003",
+            "Tayo#1324",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sun Dec 03 2017 14:51:15 GMT+0000 (UTC)"
+}

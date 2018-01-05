@@ -1,0 +1,17 @@
+{
+    "username": "dooby",
+    "discriminator": "2204",
+    "mfa_enabled": true,
+    "id": "190315325403693056",
+    "avatar": "a_bf8746b3f0ed1aa2e490691e9af2b3dd",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "florists#0788",
+            "kofеcommi#0299",
+            "spilk#9938",
+            "Tayo#1324"
+        ]
+    },
+    "date": "Sat Dec 02 2017 21:29:07 GMT+0000 (UTC)"
+}

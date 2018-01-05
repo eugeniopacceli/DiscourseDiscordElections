@@ -1,0 +1,17 @@
+{
+    "username": "TomDynamic",
+    "discriminator": "4673",
+    "mfa_enabled": false,
+    "id": "210288200923480066",
+    "avatar": "69bbe44d95b5928721108c0e72898a6f",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "grim#3881",
+            "Tayo#1324",
+            "TomDynamic#4673"
+        ]
+    },
+    "date": "Sun Dec 03 2017 05:52:32 GMT+0000 (UTC)"
+}

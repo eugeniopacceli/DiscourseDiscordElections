@@ -1,0 +1,17 @@
+{
+    "username": "Eugenio",
+    "discriminator": "0401",
+    "mfa_enabled": false,
+    "id": "247811069890789376",
+    "avatar": "215590a2cfa597787e00fc12869f8f68",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "florists#0788",
+            "kofеcommi#0299",
+            "Lain#3402",
+            "Tayo#1324"
+        ]
+    },
+    "date": "Sun Dec 03 2017 18:42:25 GMT+0000 (UTC)"
+}

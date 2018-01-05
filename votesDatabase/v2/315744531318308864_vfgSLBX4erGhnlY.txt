@@ -1,0 +1,17 @@
+{
+    "username": "buttmunch",
+    "discriminator": "6162",
+    "mfa_enabled": false,
+    "id": "315744531318308864",
+    "avatar": "6c5864bfd8d0ed55075402458ec9e537",
+    "votes": {
+        "candidates": [
+            "florists#0788",
+            "kofеcommi#0299",
+            "mop#7182",
+            "spilk#9938",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sat Dec 02 2017 21:33:37 GMT+0000 (UTC)"
+}

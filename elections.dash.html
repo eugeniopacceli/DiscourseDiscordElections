@@ -44,26 +44,6 @@
                         <h4 class="card-title">Choose a maximum of 5 candidates for moderation that you recommend.</h4>
                         <hr/>
                         <form id="voteForm" method="POST" action="/vote">
-                            <p><input class="filled-in" type="checkbox" id="1" name="candidates" value="Cage#5919" /><label for="1" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/cage.jpg" /> Cage#5919</label></p>
-                            <p><input class="filled-in" type="checkbox" id="2" name="candidates" value="dooby#2204" /><label for="2" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/dooby.png" /> dooby#2204</label></p>
-                            <p><input class="filled-in" type="checkbox" id="3" name="candidates" value="Fizzy#5376" /><label for="3" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/fizzy.jpg" /> Fizzy#5376</label></p>
-                            <p><input class="filled-in" type="checkbox" id="4" name="candidates" value="FK#5868" /><label for="4" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/fk.jpg" /> FK#5868</label></p>
-                            <p><input class="filled-in" type="checkbox" id="5" name="candidates" value="florists#0788" /><label for="5" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/florist.jpg" /> florists#0788</label></p>
-                            <p><input class="filled-in" type="checkbox" id="6" name="candidates" value="grim#3881" /><label for="6" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/grim.jpg" /> grim#3881</label></p>
-                            <p><input class="filled-in" type="checkbox" id="7" name="candidates" value="jerry#4805" /><label for="7" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/jerry.jpg" /> jerry#4805</label></p>
-                            <p><input class="filled-in" type="checkbox" id="8" name="candidates" value="John Egbert#1583" /><label for="8" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/john.jpg" /> John Egbert#1583</label></p>
-                            <p><input class="filled-in" type="checkbox" id="9" name="candidates" value="kofеcommi#0299" /><label for="9" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/koffi.jpg" /> kofеcommi#0299</label></p>
-                            <p><input class="filled-in" type="checkbox" id="10" name="candidates" value="Lain#3402" /><label for="10" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/lain.png" /> Lain#3402</label></p>
-                            <p><input class="filled-in" type="checkbox" id="11" name="candidates" value="mop#7182" /><label for="11" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/mop.jpg" /> mop#7182</label></p>
-                            <p><input class="filled-in" type="checkbox" id="12" name="candidates" value="Ronald Raygun#4160" /><label for="12" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/ronald.jpg" /> Ronald Raygun#4160</label></p>
-                            <p><input class="filled-in" type="checkbox" id="13" name="candidates" value="Smackan™#0003" /><label for="13" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/smackban.jpg" /> Smackan™#0003</label></p>
-                            <p><input class="filled-in" type="checkbox" id="14" name="candidates" value="spilk#9938" /><label for="14" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/spilk.jpg" /> spilk#9938</label></p>
-                            <p><input class="filled-in" type="checkbox" id="15" name="candidates" value="Tayo#1324" /><label for="15" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/tayo.jpg" /> Tayo#1324</label></p>
-                            <p><input class="filled-in" type="checkbox" id="16" name="candidates" value="theamatuer#5417" /><label for="16" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/theamateur.jpg" /> theamatuer#5417</label></p>
-                            <p><input class="filled-in" type="checkbox" id="17" name="candidates" value="TomDynamic#4673" /><label for="17" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/tom.jpg" /> TomDynamic#4673</label></p>
-                            <p><input class="filled-in" type="checkbox" id="20" name="candidates" value="Triggernomics#4142" /><label for="20" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/trigger.jpg" /> Triggernomics#4142</label></p>
-                            <p><input class="filled-in" type="checkbox" id="19" name="candidates" value="tringle#3427" /><label for="19" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/tringle.jpg" /> tringle#3427</label></p>
-                            <p><input class="filled-in" type="checkbox" id="18" name="candidates" value="VTomatoma#9227" /><label for="18" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/vt.jpg" /> VTomatoma#9227</label></p>
                             <button type="button" id="confirmBtn" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
@@ -103,6 +83,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script>
       let candidates = [];
+      let uicandidates = [
+        { name: "BOXER#0774", avatar: "boxer.webp" },
+        { name: "squishy#0399", avatar: "squishy.png" },
+        { name: "rndrflotilla#9491 (rustie)", avatar: "rustie.webp" },
+        { name: "Fizzy#5376", avatar: "fizzy.webp" },
+        { name: "Triggernomics#4142", avatar: "trigger.webp" },
+        { name: "Merc#2621", avatar: "merc.webp" },
+        { name: "VTomatoma#9227", avatar: "vttomatoma.webp" },
+        { name: "Timo Salterson#3782", avatar: "timosalterson.webp" },
+        { name: "🤶Geim🤶#1245", avatar: "geim.webp" },
+        { name: "Deleted account#9378 (DJ)", avatar: "dj.webp" },
+        { name: "￼￼￼￼￼￼￼￼￼Alex#3402 (𝓚𝓪𝓶𝓲-𝓼𝓪𝓶𝓪)", avatar: "lain.webp" },
+        { name: "☭Анатолий☭#5986", avatar: "ahatomn.webp" },
+        { name: "TomDynamic#4673", avatar: "tomdynamic.webp" },
+        { name: "/r/Trump#7886", avatar: "rtrump.webp" },
+        { name: "spilk#9938", avatar: "spilk.webp" },
+        { name: "Ratpack#7447", avatar: "ratpack.webp" },
+        { name: "florists#0788", avatar: "florist.webp" },
+        { name: "kofеcommi ☕#0299", avatar: "koffecommi.webp" },
+        { name: "ㄒ尺丨几Ꮆㄥ乇#3427", avatar: "tringle.webp" },
+        { name: "FK#5868", avatar: "fk.webp" },
+        { name: "Hekate#1306 (Naho The Pupperless)", avatar: "naho.webp" },
+        { name: "Sylvanas#2143", avatar: "sylvanas.webp"}
+      ];
+
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+
+      function sortAndPrint(candidatesData){
+        let index = 0;
+        for(let cand of shuffleArray(candidatesData)){
+          $("#voteForm").prepend('<p><input class="filled-in" type="checkbox" id="' + index + '" name="candidates" value="' + cand.name +
+                                 '" /><label for="' + index + '" style="margin-bottom: 15px"><img class="rounded-circle" style="width:48px" src="../../avatars/' + cand.avatar +
+                                 '" /> ' + cand.name + '</label></p>');
+          index++;
+        }
+      }
 
       $('.modal').modal({
           dismissible: false
@@ -162,5 +183,7 @@
       $.get("/elections/whoami", function(data) {
         $("#userinfo").html(data);
       });
+
+      sortAndPrint(uicandidates);
     </script>
 </html>

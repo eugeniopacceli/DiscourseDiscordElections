@@ -1,0 +1,15 @@
+{
+    "username": "Kosaki",
+    "discriminator": "5281",
+    "mfa_enabled": false,
+    "id": "84597611213881344",
+    "avatar": "a_7089f15a8e1d6a897c6f317acca0492e",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "Smackan™#0003"
+        ]
+    },
+    "date": "Sat Dec 02 2017 21:32:32 GMT+0000 (UTC)"
+}

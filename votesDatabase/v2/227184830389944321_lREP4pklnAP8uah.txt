@@ -1,0 +1,15 @@
+{
+    "username": "Cage",
+    "discriminator": "5919",
+    "mfa_enabled": false,
+    "id": "227184830389944321",
+    "avatar": "c8e5bf960d4382a431e643ac33b99d0a",
+    "votes": {
+        "candidates": [
+            "Cage#5919",
+            "grim#3881",
+            "Triggernomics#4142"
+        ]
+    },
+    "date": "Sun Dec 03 2017 12:37:25 GMT+0000 (UTC)"
+}

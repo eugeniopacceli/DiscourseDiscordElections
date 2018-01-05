@@ -1,0 +1,17 @@
+{
+    "username": "Triggernomics",
+    "discriminator": "4142",
+    "mfa_enabled": false,
+    "id": "350130055382433793",
+    "avatar": "a64926471968aed513d8e9e072954f66",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "Tayo#1324",
+            "Triggernomics#4142",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sun Dec 03 2017 03:39:58 GMT+0000 (UTC)"
+}

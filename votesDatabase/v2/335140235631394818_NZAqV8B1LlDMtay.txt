@@ -1,0 +1,17 @@
+{
+    "username": "florists",
+    "discriminator": "6867",
+    "mfa_enabled": false,
+    "id": "335140235631394818",
+    "avatar": null,
+    "votes": {
+        "candidates": [
+            "florists#0788",
+            "kofеcommi#0299",
+            "mop#7182",
+            "tringle#3427",
+            "VTomatoma#9227"
+        ]
+    },
+    "date": "Sat Dec 02 2017 21:37:40 GMT+0000 (UTC)"
+}

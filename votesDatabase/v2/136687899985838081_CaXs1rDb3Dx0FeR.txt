@@ -1,0 +1,17 @@
+{
+    "username": "John Egbert",
+    "discriminator": "1583",
+    "mfa_enabled": false,
+    "id": "136687899985838081",
+    "avatar": "864d58052cc4a7b9740853f36f711f78",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "John Egbert#1583",
+            "Tayo#1324",
+            "tringle#3427"
+        ]
+    },
+    "date": "Sat Dec 02 2017 21:45:07 GMT+0000 (UTC)"
+}

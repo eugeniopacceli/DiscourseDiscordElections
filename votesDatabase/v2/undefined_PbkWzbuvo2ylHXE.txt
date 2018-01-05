@@ -1,0 +1,14 @@
+{
+    "code": 0,
+    "message": "401: Unauthorized",
+    "votes": {
+        "candidates": [
+            "dooby#2204",
+            "FK#5868",
+            "kofеcommi#0299",
+            "Lain#3402",
+            "Ronald Raygun#4160"
+        ]
+    },
+    "date": "Sun Dec 03 2017 04:30:28 GMT+0000 (UTC)"
+}

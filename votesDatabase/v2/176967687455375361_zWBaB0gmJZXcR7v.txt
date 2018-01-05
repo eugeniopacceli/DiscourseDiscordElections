@@ -1,0 +1,17 @@
+{
+    "username": "edgar",
+    "discriminator": "8137",
+    "mfa_enabled": true,
+    "id": "176967687455375361",
+    "avatar": "8d3c1d70edba3b743a25d6ee22ce7465",
+    "votes": {
+        "candidates": [
+            "florists#0788",
+            "kofеcommi#0299",
+            "spilk#9938",
+            "tringle#3427",
+            "VTomatoma#9227"
+        ]
+    },
+    "date": "Sun Dec 03 2017 06:52:38 GMT+0000 (UTC)"
+}
