@@ -32,8 +32,8 @@
           </div>
           <center>
             <div class="inner cover">
-                <h1>Discourse Discord 2nd Moderation Elections</h1>
-                <p class="lead">Mark the (maximum 5) folks that you want to see as moderators of the Discourse Discord server.<br>Choose candidates that you trust and see as sensible, honest, mature and responsible!<br>List sorted by time of candidature application.</p>
+                <h1>Should the server cease voting for moderators?</h1>
+                <p class="lead">Mark the option you want to prevail!</p>
                 <div class="card text-justify">
                     <div class="card-header">
                         Elector Form
@@ -41,7 +41,8 @@
                     <div class="card-block">
                         <h4 class="card-title" id="userinfo"></h4>
                         <hr/>
-                        <h4 class="card-title">Choose a maximum of 5 candidates for moderation that you recommend.</h4>
+                        <h4 class="card-title">Should the server cease voting for moderators?</h4>
+                        <h5 class="card-title">Choose an option. If we vote to end voting, the mods will be Dooby, Tringle, Sylvanas, Eugenio, Ratpack, Spilk, and Naho.</h5>
                         <hr/>
                         <form id="voteForm" method="POST" action="/vote">
                             <button type="button" id="confirmBtn" class="btn btn-primary">Submit</button>
@@ -84,28 +85,8 @@
     <script>
       let candidates = [];
       let uicandidates = [
-        { name: "BOXER#0774", avatar: "boxer.png" },
-        { name: "squishy#0399", avatar: "squishy.png" },
-        { name: "rndrflotilla#9491 (rustie)", avatar: "rustie.png" },
-        { name: "Fizzy#5376", avatar: "fizzy.png" },
-        { name: "Triggernomics#4142", avatar: "trigger.png" },
-        { name: "Merc#2621", avatar: "merc.png" },
-        { name: "VTomatoma#9227", avatar: "vttomatoma.png" },
-        { name: "Timo Salterson#3782", avatar: "timosalterson.png" },
-        { name: "🤶Geim🤶#1245", avatar: "geim.png" },
-        { name: "Deleted account#9378 (DJ)", avatar: "dj.png" },
-        { name: "￼￼￼￼￼￼￼￼￼Alex#3402 (𝓚𝓪𝓶𝓲-𝓼𝓪𝓶𝓪)", avatar: "lain.png" },
-        { name: "☭Анатолий☭#5986", avatar: "ahatomn.png" },
-        { name: "TomDynamic#4673", avatar: "tomdynamic.png" },
-        { name: "/r/Trump#7886", avatar: "rtrump.png" },
-        { name: "spilk#9938", avatar: "spilk.png" },
-        { name: "Ratpack#7447", avatar: "ratpack.png" },
-        { name: "florists#0788", avatar: "florist.png" },
-        { name: "kofеcommi ☕#0299", avatar: "koffecommi.png" },
-        { name: "ㄒ尺丨几Ꮆㄥ乇#3427", avatar: "tringle.png" },
-        { name: "FK#5868", avatar: "fk.png" },
-        { name: "Hekate#1306 (Naho The Pupperless)", avatar: "naho.png" },
-        { name: "Sylvanas#2143", avatar: "sylvanas.png"}
+        { name: "Yes, end voting for mods monthly.", avatar: "yes.png" },
+        { name: "No, continue with elections.", avatar: "no.png"}
       ];
 
       function shuffleArray(array) {
@@ -124,24 +105,26 @@
                                  '" /> ' + cand.name + '</label></p>');
           index++;
         }
+        initOptions();
       }
 
       $('.modal').modal({
           dismissible: false
       });
 
-      $(".filled-in").prop("checked", false);
-
-      $(".filled-in").change(function() {
-        var voteContent = $("#voteForm").serializeArray();
-        var numberOfVotes = 0;
-        for(var obj of voteContent){
-            if(obj.name == "candidates") numberOfVotes++;
-        }
-        if(numberOfVotes > 5){
-          $(this).prop("checked", false);
-        }
-      });
+      function initOptions(){
+        $(".filled-in").prop("checked", false);
+        $(".filled-in").change(function() {
+          var voteContent = $("#voteForm").serializeArray();
+          var numberOfVotes = 0;
+          for(var obj of voteContent){
+              if(obj.name == "candidates") numberOfVotes++;
+          }
+          if(numberOfVotes > 1){
+            $(this).prop("checked", false);
+          }
+        });
+      }
     
       function showResponseModal(msg){
         $('.modal').modal('close');
@@ -167,8 +150,8 @@
               if(obj.name == "candidates") numberOfVotes++;
               stringVotes += obj.value + "<br/>";
           }
-          if(numberOfVotes > 5){
-            stringVotes += "You can only vote for 5 (five) candidates for your vote to be counted and validated, try again!";
+          if(numberOfVotes > 1){
+            stringVotes += "You can only vote for 1 candidate for your vote to be counted and validated, try again!";
           }
           showConfirmModal(stringVotes);
       });

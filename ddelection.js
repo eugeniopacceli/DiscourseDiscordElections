@@ -9,6 +9,7 @@ var session = require('express-session');
 var app = express();
 
 app.use('/js', express.static(__dirname + '/js'));
+app.use('/images', express.static(__dirname + '/images'));
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/avatars', express.static(__dirname + '/avatars'));
 app.use(bodyParser.json());
@@ -35,6 +36,10 @@ function ensureSecure(req, res, next){
 
 app.all('*', ensureSecure);
 */
+
+app.get('/memoryLane/zipFile.zip', function(req,res){
+    res.sendFile(__dirname+'/memoryLane.zip');
+});
 
 app.get('/elections/', function (req, res) {
     res.sendFile(__dirname+'/elections.html');
@@ -114,7 +119,7 @@ app.get('/elections/guard/', function (req, res) {
         {
             url:'https://discordapp.com/api/oauth2/token',
             form: {client_id:'382330416931143691',
-                    client_secret: '<!-- SECRET --!>',
+                    client_secret: 'dYjSRouqbu8j1WRRoGu71NsVdympICHu',
                     grant_type: 'authorization_code',
                     code: req.query.code,
                     redirect_uri: 'https://discoursediscord.com/elections/guard/'
